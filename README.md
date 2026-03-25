@@ -168,7 +168,3 @@ jupyter notebook
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-nagaramishetty-blue?logo=linkedin)](https://linkedin.com/in/nagaramishetty)
 [![Email](https://img.shields.io/badge/Email-nagahemaramishetty2@gmail.com-red?logo=gmail)](mailto:nagahemaramishetty2@gmail.com)
-
-```
-
-```
