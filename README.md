@@ -162,42 +162,7 @@ pip install numpy pandas scipy statsmodels matplotlib seaborn scikit-learn jupyt
 jupyter notebook
 ```
 
-Open `Product_Experimentation_Analytics_Engine.ipynb` and run all cells.
-
----
-
-## Interview Talking Points
-
-- **Why Chi-Square over t-test for CTR/CVR?**
-  CTR and CVR are binary proportion-based outcomes — Chi-Square is the correct
-  test for comparing distributions of categorical outcomes across two groups.
-  t-test assumes continuous normally distributed data which does not apply here.
-
-- **Why Bayesian in addition to frequentist?**
-  Frequentist p-values answer "how likely is this data if H0 is true" — not directly
-  actionable. Bayesian posterior gives "probability treatment is better" — directly
-  answers the product team's question. Both frameworks agreeing strengthens the
-  ship recommendation.
-
-- **Why was the experiment underpowered for CVR?**
-  CVR baseline of 0.41% is extremely low. Detecting a 0.1% absolute lift requires
-  71,666 users per group — a real-world constraint. The business decision is either
-  increasing MDE threshold to 0.3% (requiring only 9,536 users) or running the
-  experiment longer to accumulate sufficient traffic.
-
-- **What does the mobile CVR finding mean for the rollout decision?**
-  Mobile is the only device segment with statistically significant CVR improvement
-  (85.68% lift, p=0.003). This suggests the new layout specifically addresses
-  friction points in the mobile purchase flow. Recommendation: ship to mobile
-  users first, monitor CVR for 2 weeks, then expand to desktop.
-
-- **Why use Beta(1,1) as prior?**
-  Beta(1,1) is a uniform distribution — it assigns equal probability to all
-  possible CTR values between 0 and 1. This is a weakly informative prior
-  meaning we let the data speak without injecting assumptions about
-  baseline conversion rates.
-
----
+## Open `Product_Experimentation_Analytics_Engine.ipynb` and run all cells.
 
 ## Connect
 
@@ -206,32 +171,4 @@ Open `Product_Experimentation_Analytics_Engine.ipynb` and run all cells.
 
 ```
 
----
-
-## Steps to Push
-
-**1. Update README on GitHub:**
-- Go to your repo → click `README.md` → pencil icon
-- Replace all content with the above
-- Commit: `Added professional README with dashboard and interview talking points`
-
-**2. Upload all PNG files to the repo:**
-- `experiment_dashboard.png`
-- `frequentist_ab_test.png`
-- `bayesian_ab_test.png`
-- `power_analysis.png`
-- `cohort_segmentation.png`
-
-**3. Add About section on GitHub:**
 ```
-
-End-to-end A/B testing framework on 50K e-commerce user events. Frequentist + Bayesian inference, power analysis, cohort segmentation — 13 significant interaction effects identified.
-
-```
-
-**4. Topics to add:**
-```
-
-python ab-testing bayesian-inference hypothesis-testing
-power-analysis cohort-analysis scipy statsmodels
-ecommerce experimentation
